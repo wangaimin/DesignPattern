@@ -1,0 +1,18 @@
+观察者模式：观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听一个主题对象，这个主题对象在状态变化时，会通知所有观察者对象，使他们能够自动更新自己的状态
+
+设计总结：
+
+本例：手机和电视同时订阅天气预报
+
+.NET中的应用：
+     委托与事件、winform中点击事件相应注册的监听
+
+     // 委托充当订阅者接口类
+     public delegate void NotifyEventHandler(object sender);
+     //新增对订阅号列表的维护操作
+     public void AddObserver(NotifyEventHandler ob)
+     {
+        NotifyEvent += ob;
+     }
+
+JAVA中的应用：
