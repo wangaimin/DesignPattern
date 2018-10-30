@@ -1,7 +1,12 @@
 
-import Patterns.ObserverPattern.Phone;
-import Patterns.ObserverPattern.TV;
-import Patterns.ObserverPattern.Weather;
+import Patterns.DecoratorPattern.DecoratorTest;
+import Patterns.ObserverPattern.ObserverTest;
+import Patterns.StrategyPattern.StrategyPatternTest;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 public class Main {
 
@@ -10,7 +15,7 @@ public class Main {
         System.out.println("Hello World!");
 
         //策略模式
-        //StrategyPatternTest.Test();
+        StrategyPatternTest.Test();
 
         //观察者模式
         ObserverTest.Test();
