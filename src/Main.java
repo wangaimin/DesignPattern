@@ -1,9 +1,11 @@
 
 import Patterns.DecoratorPattern.DecoratorTest;
 import Patterns.ObserverPattern.ObserverTest;
+import Patterns.SimpleFactory.DrinkTest;
 import Patterns.StrategyPattern.StrategyPatternTest;
 
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -23,6 +25,9 @@ public class Main {
         //装饰者模式
         DecoratorTest.Test();
 
+        //简单工厂（静态工厂方法）
+        DrinkTest.Test();
+
         LinkedList<String> linkedList = new LinkedList<>();
         HashMap<String, ArrayList<String>> hashMap = new HashMap<>();
         hashMap.put("路飞", new ArrayList<String>() {{
@@ -32,6 +37,7 @@ public class Main {
             add("暗暗果实"); add("震震果实");}});
 
         hashMap.get("黑胡子");
+
     }
 
 }
