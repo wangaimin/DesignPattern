@@ -6,13 +6,20 @@ package Patterns.FactoryMethodPattern;
  * description:青椒回锅
  */
 public class SiChuanGreenPepperDoubleDookedPorkSlices extends DoubleDookedPorkSlices {
+    FoodMaterialFactory foodMaterialFactory;
+    public SiChuanGreenPepperDoubleDookedPorkSlices(FoodMaterialFactory foodMaterialFactory) {
+        this.foodMaterialFactory=foodMaterialFactory;
+    }
     /**
      * 准备
      */
     @Override
     public void Prepare() {
         System.out.println(GetName());
-        System.out.println("准备好青椒和5分瘦5分精的猪肉、郫县豆瓣");
+        System.out.println("调用食材抽象工厂取出食材：");
+        System.out.println(foodMaterialFactory.CreatePigCategory());
+        System.out.println(foodMaterialFactory.CreateGreenPepperCategory());
+       // System.out.println("准备好青椒和5分瘦5分精的猪肉、郫县豆瓣");
     }
 
     /**

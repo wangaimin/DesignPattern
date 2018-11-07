@@ -6,13 +6,22 @@ package Patterns.FactoryMethodPattern;
  * description:
  */
 public class ShangHaiGreenPepperDoubleDookedPorkSlices extends DoubleDookedPorkSlices {
+    FoodMaterialFactory foodMaterialFactory;
+
+    public ShangHaiGreenPepperDoubleDookedPorkSlices(FoodMaterialFactory foodMaterialFactory) {
+        this.foodMaterialFactory = foodMaterialFactory;
+    }
+
     /**
      * 准备
      */
     @Override
     public void Prepare() {
         System.out.println(GetName());
-        System.out.println("准备好青椒和5分瘦5分精的猪肉、白糖");
+        System.out.println("调用食材抽象工厂取出食材：");
+        System.out.println(foodMaterialFactory.CreatePigCategory());
+        System.out.println(foodMaterialFactory.CreateGarlicBolt());
+       // System.out.println("准备好青椒和5分瘦5分精的猪肉、白糖");
     }
 
     /**

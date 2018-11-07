@@ -6,6 +6,11 @@ package Patterns.FactoryMethodPattern;
  * description:四川餐馆
  */
 public class SiChuanRestaurant extends Restaurant {
+    FoodMaterialFactory foodMaterialFactory;
+    public SiChuanRestaurant( FoodMaterialFactory foodMaterialFactory) {
+        this.foodMaterialFactory=foodMaterialFactory;
+    }
+
     /**
      * 获取回锅肉类型
      *
@@ -15,9 +20,9 @@ public class SiChuanRestaurant extends Restaurant {
     @Override
     protected DoubleDookedPorkSlices createDoubleDookedPorkSlices(String type) {
         if (type=="GreenPepper"){
-            return new SiChuanGreenPepperDoubleDookedPorkSlices();
+            return new SiChuanGreenPepperDoubleDookedPorkSlices(foodMaterialFactory);
         }else if(type=="GarlicBolt") {
-            return new SiChuanGarlicBoltDoubleDookedPorkSlices();
+            return new SiChuanGarlicBoltDoubleDookedPorkSlices(foodMaterialFactory);
         }else{
             return null;
         }

@@ -6,9 +6,7 @@ import Patterns.SimpleFactory.DrinkTest;
 import Patterns.StrategyPattern.StrategyPatternTest;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
 

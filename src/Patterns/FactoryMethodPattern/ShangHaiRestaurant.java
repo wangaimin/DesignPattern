@@ -7,6 +7,11 @@ package Patterns.FactoryMethodPattern;
  */
 public class ShangHaiRestaurant extends Restaurant
 {
+    FoodMaterialFactory foodMaterialFactory;
+    public ShangHaiRestaurant(FoodMaterialFactory foodMaterialFactory) {
+        this.foodMaterialFactory=foodMaterialFactory;
+    }
+
     /**
      * 获取回锅肉类型
      *
@@ -16,9 +21,9 @@ public class ShangHaiRestaurant extends Restaurant
     @Override
     protected DoubleDookedPorkSlices createDoubleDookedPorkSlices(String type) {
         if (type=="GreenPepper"){
-            return new ShangHaiGreenPepperDoubleDookedPorkSlices();
+            return new ShangHaiGreenPepperDoubleDookedPorkSlices(foodMaterialFactory);
         }else if(type=="GarlicBolt") {
-            return new ShangHaiGarlicBoltDoubleDookedPorkSlices();
+            return new ShangHaiGarlicBoltDoubleDookedPorkSlices(foodMaterialFactory);
         }else{
             return null;
         }

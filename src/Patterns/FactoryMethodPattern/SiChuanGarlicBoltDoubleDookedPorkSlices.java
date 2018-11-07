@@ -6,13 +6,21 @@ package Patterns.FactoryMethodPattern;
  * description:蒜苗回锅
  */
 public class SiChuanGarlicBoltDoubleDookedPorkSlices extends DoubleDookedPorkSlices {
+    FoodMaterialFactory foodMaterialFactory;
+    public SiChuanGarlicBoltDoubleDookedPorkSlices(FoodMaterialFactory foodMaterialFactory) {
+        this.foodMaterialFactory=foodMaterialFactory;
+    }
+
     /**
      * 准备
      */
     @Override
     public void Prepare() {
         System.out.println(GetName());
-        System.out.println("准备好青椒和7分瘦3分精的猪肉");
+        System.out.println("调用食材抽象工厂取出食材：");
+        System.out.println(foodMaterialFactory.CreatePigCategory());
+        System.out.println(foodMaterialFactory.CreateGarlicBolt());
+      //  System.out.println("准备好青椒和7分瘦3分精的猪肉");
     }
 
     /**

@@ -7,10 +7,10 @@ package Patterns.FactoryMethodPattern;
  */
 public class FactoryMethodPatternTest {
     public static void TestFactoryMethodPattern(){
-        SiChuanRestaurant siChuanRestaurant=new SiChuanRestaurant();
+        SiChuanRestaurant siChuanRestaurant=new SiChuanRestaurant(new SiChuanFoodMaterialFactory());
         siChuanRestaurant.GetDoubleDookedPorkSlices("GreenPepper");
 
-        Restaurant shangHaiRestaurant=new ShangHaiRestaurant();
+        Restaurant shangHaiRestaurant=new ShangHaiRestaurant(new ShangHaiFoodMaterialFactory());
         shangHaiRestaurant.GetDoubleDookedPorkSlices("GarlicBolt");
     }
 }
