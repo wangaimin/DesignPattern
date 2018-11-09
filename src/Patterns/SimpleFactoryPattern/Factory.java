@@ -1,4 +1,4 @@
-package Patterns.SimpleFactory;
+package Patterns.SimpleFactoryPattern;
 
 /**
  * @author:wangaimin

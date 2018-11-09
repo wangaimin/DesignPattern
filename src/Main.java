@@ -2,7 +2,8 @@
 import Patterns.DecoratorPattern.DecoratorTest;
 import Patterns.FactoryMethodPattern.FactoryMethodPatternTest;
 import Patterns.ObserverPattern.ObserverTest;
-import Patterns.SimpleFactory.DrinkTest;
+import Patterns.SimpleFactoryPattern.DrinkTest;
+import Patterns.SingletonPattern.SingletonTest;
 import Patterns.StrategyPattern.StrategyPatternTest;
 
 
@@ -29,6 +30,8 @@ public class Main {
         //工厂方法
         FactoryMethodPatternTest.TestFactoryMethodPattern();
 
+        //单例模式
+        SingletonTest.SingletonClassTest();
 
 
         CollectionTest();
@@ -38,6 +41,10 @@ public class Main {
      * 集合测试
      */
     private static void CollectionTest() {
+
+        //数据存储在char[]中，初始默认长度16
+        StringBuilder stringBuilder= new StringBuilder();
+
         LinkedList<String> linkedList = new LinkedList<>();
         HashMap<String, ArrayList<String>> hashMap = new HashMap<>();
         hashMap.put("路飞", new ArrayList<String>() {{
