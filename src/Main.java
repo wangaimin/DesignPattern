@@ -1,4 +1,5 @@
 
+import Patterns.CommandPattern.CommandPatternTest;
 import Patterns.DecoratorPattern.DecoratorTest;
 import Patterns.FactoryMethodPattern.FactoryMethodPatternTest;
 import Patterns.ObserverPattern.ObserverTest;
@@ -33,6 +34,8 @@ public class Main {
         //单例模式
         SingletonTest.SingletonClassTest();
 
+        //命令模式
+        CommandPatternTest.TestCommandPattern();
 
         CollectionTest();
     }
