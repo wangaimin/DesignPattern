@@ -1,4 +1,5 @@
 
+import Patterns.AdapterPattern.AdapterPatternTest;
 import Patterns.CommandPattern.CommandPatternTest;
 import Patterns.DecoratorPattern.DecoratorTest;
 import Patterns.FactoryMethodPattern.FactoryMethodPatternTest;
@@ -36,6 +37,9 @@ public class Main {
 
         //命令模式
         CommandPatternTest.TestCommandPattern();
+
+        //适配器模式
+        AdapterPatternTest.TestAdapterPattern();
 
         CollectionTest();
     }

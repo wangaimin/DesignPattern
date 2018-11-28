@@ -35,7 +35,7 @@ public abstract class Duck {
     /**
      * 发出声音
      */
-    public void MackSound() {
+    public void MakeSound() {
         System.out.println("嘎嘎嘎");
     }
 

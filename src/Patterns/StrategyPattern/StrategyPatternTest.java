@@ -16,7 +16,7 @@ public class StrategyPatternTest {
         mallardDuck.DisPlay();
         mallardDuck.Fly();
         mallardDuck.LegCount();
-        mallardDuck.MackSound();
+        mallardDuck.MakeSound();
 
 
         ArrayList<String> arrayList=new ArrayList<>();

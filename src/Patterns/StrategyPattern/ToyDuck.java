@@ -19,7 +19,7 @@ public class ToyDuck extends Duck {
     }
 
     @Override
-    public void MackSound() {
+    public void MakeSound() {
         System.out.println("格子格子格子");
     }
 }
