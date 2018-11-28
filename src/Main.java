@@ -8,6 +8,7 @@ import Patterns.ObserverPattern.ObserverTest;
 import Patterns.SimpleFactoryPattern.DrinkTest;
 import Patterns.SingletonPattern.SingletonTest;
 import Patterns.StrategyPattern.StrategyPatternTest;
+import Patterns.TemplateMethodPattern.TemplateMethodPatternTest;
 
 
 import java.util.*;
@@ -44,6 +45,9 @@ public class Main {
 
         //外观模式
         FacadePatternTest.Test();
+
+        //模板方法模式
+        TemplateMethodPatternTest.Test();
 
         CollectionTest();
     }
