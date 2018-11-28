@@ -2,6 +2,7 @@
 import Patterns.AdapterPattern.AdapterPatternTest;
 import Patterns.CommandPattern.CommandPatternTest;
 import Patterns.DecoratorPattern.DecoratorTest;
+import Patterns.FacadePattern.FacadePatternTest;
 import Patterns.FactoryMethodPattern.FactoryMethodPatternTest;
 import Patterns.ObserverPattern.ObserverTest;
 import Patterns.SimpleFactoryPattern.DrinkTest;
@@ -40,6 +41,9 @@ public class Main {
 
         //适配器模式
         AdapterPatternTest.TestAdapterPattern();
+
+        //外观模式
+        FacadePatternTest.Test();
 
         CollectionTest();
     }
