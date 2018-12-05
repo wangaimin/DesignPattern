@@ -4,6 +4,7 @@ import Patterns.CommandPattern.CommandPatternTest;
 import Patterns.DecoratorPattern.DecoratorTest;
 import Patterns.FacadePattern.FacadePatternTest;
 import Patterns.FactoryMethodPattern.FactoryMethodPatternTest;
+import Patterns.IteratorPattern.IteratorPatternTest;
 import Patterns.ObserverPattern.ObserverTest;
 import Patterns.SimpleFactoryPattern.DrinkTest;
 import Patterns.SingletonPattern.SingletonTest;
@@ -48,6 +49,9 @@ public class Main {
 
         //模板方法模式
         TemplateMethodPatternTest.Test();
+
+        //迭代器模式
+        IteratorPatternTest.Test();
 
         CollectionTest();
     }
