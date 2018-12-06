@@ -8,6 +8,7 @@ import Patterns.IteratorPattern.IteratorPatternTest;
 import Patterns.ObserverPattern.ObserverTest;
 import Patterns.SimpleFactoryPattern.DrinkTest;
 import Patterns.SingletonPattern.SingletonTest;
+import Patterns.StatePattern.TestStatePattern;
 import Patterns.StrategyPattern.StrategyPatternTest;
 import Patterns.TemplateMethodPattern.TemplateMethodPatternTest;
 
@@ -52,6 +53,9 @@ public class Main {
 
         //迭代器模式
         IteratorPatternTest.Test();
+
+        //状态模式
+        TestStatePattern.Test();
 
         CollectionTest();
     }
