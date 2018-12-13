@@ -12,9 +12,6 @@ public class GumballMachine {
     State noCoins;
     State soldState;
     State soldOutState;
-
-
-
     State supplierStar;
     int count;
     State state;
