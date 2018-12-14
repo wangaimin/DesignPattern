@@ -11,6 +11,7 @@ import Patterns.SingletonPattern.SingletonTest;
 import Patterns.StatePattern.TestStatePattern;
 import Patterns.StrategyPattern.StrategyPatternTest;
 import Patterns.TemplateMethodPattern.TemplateMethodPatternTest;
+import Patterns.Mix.DuckSimulatorTest;
 
 
 import java.util.*;
@@ -56,6 +57,9 @@ public class Main {
 
         //状态模式
         TestStatePattern.Test();
+
+        //Mix
+        DuckSimulatorTest.Test();
 
         CollectionTest();
     }
