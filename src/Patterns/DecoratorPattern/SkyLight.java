@@ -6,7 +6,8 @@ package Patterns.DecoratorPattern;
  * @description:天窗
  */
 
-public class SkyLight extends CarDecorator {
+public class
+SkyLight extends CarDecorator {
 
     Car car;
     @Override

@@ -12,8 +12,8 @@ public class CountingDuckFactory extends AbstractDuckFactory {
      * @return
      */
     @Override
-    public Kuackable CreateMallardDuck() {
-        return new KuackableCounter(new MallardDuck());
+    public Quackable CreateMallardDuck() {
+        return new QuackableCounter(new MallardDuck());
     }
 
     /**
@@ -22,7 +22,7 @@ public class CountingDuckFactory extends AbstractDuckFactory {
      * @return
      */
     @Override
-    public Kuackable CreateRedHeadDuck() {
-        return new KuackableCounter(new RedHeadDuck());
+    public Quackable CreateRedHeadDuck() {
+        return new QuackableCounter(new RedHeadDuck());
     }
 }

@@ -10,11 +10,11 @@ public abstract class AbstractDuckFactory {
      * 创建绿头鸭
      * @return
      */
-    public abstract Kuackable CreateMallardDuck();
+    public abstract Quackable CreateMallardDuck();
 
     /**
      * 创建红头鸭
      * @return
      */
-    public abstract Kuackable CreateRedHeadDuck();
+    public abstract Quackable CreateRedHeadDuck();
 }

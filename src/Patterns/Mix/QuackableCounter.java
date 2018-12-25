@@ -5,18 +5,18 @@ package Patterns.Mix;
  * date:2018/12/14 10:09
  * description:
  */
-public class KuackableCounter implements Kuackable {
-    Kuackable kuackable;
+public class QuackableCounter implements Quackable {
+    Quackable quackable;
     static int count=0;
 
-    public KuackableCounter(Kuackable kuackable) {
-        this.kuackable = kuackable;
+    public QuackableCounter(Quackable quackable) {
+        this.quackable = quackable;
     }
 
     @Override
     public void quack() {
         count++;
-        kuackable.quack();
+        quackable.quack();
     }
 
     /**

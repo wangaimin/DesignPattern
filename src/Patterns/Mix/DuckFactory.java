@@ -12,7 +12,7 @@ public class DuckFactory extends AbstractDuckFactory {
      * @return
      */
     @Override
-    public Kuackable CreateMallardDuck() {
+    public Quackable CreateMallardDuck() {
         return new MallardDuck();
     }
 
@@ -22,7 +22,7 @@ public class DuckFactory extends AbstractDuckFactory {
      * @return
      */
     @Override
-    public Kuackable CreateRedHeadDuck() {
+    public Quackable CreateRedHeadDuck() {
         return new RedHeadDuck();
     }
 }

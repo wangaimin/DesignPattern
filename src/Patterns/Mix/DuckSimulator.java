@@ -1,9 +1,5 @@
 package Patterns.Mix;
 
-import jdk.nashorn.internal.runtime.Undefined;
-
-import javax.lang.model.type.UnknownTypeException;
-
 /**
  * author:'Gene.A.Wang'
  * date:2018/12/14 9:50
@@ -14,13 +10,13 @@ public class DuckSimulator {
     public DuckSimulator() {
 
         //未使用抽象工厂之前
-//        Kuackable mallardDuck = new KuackableCounter(new MallardDuck());
-//        Kuackable redHeadDuck = new KuackableCounter(new RedHeadDuck());
-//        Kuackable gooseDuckAdapter = new GooseToKuackableAdapter(new CountryGoose());
+//        Quackable mallardDuck = new QuackableCounter(new MallardDuck());
+//        Quackable redHeadDuck = new QuackableCounter(new RedHeadDuck());
+//        Quackable gooseDuckAdapter = new GooseToQuackableAdapter(new CountryGoose());
 //        Simulator(mallardDuck);
 //        Simulator(redHeadDuck);
 //        Simulator(gooseDuckAdapter);
-//        System.out.println("鸭子叫唤次数："+KuackableCounter.GetQuackCount());
+//        System.out.println("鸭子叫唤次数："+QuackableCounter.GetQuackCount());
 
 
 
@@ -32,21 +28,32 @@ public class DuckSimulator {
     }
 
     public void Init(AbstractDuckFactory abstractDuckFactory){
-        Kuackable gooseDuckAdapter = new GooseToKuackableAdapter(new CountryGoose());
+        Quackable gooseDuckAdapter = new GooseToQuackableAdapter(new CountryGoose());
 
-        Simulator((abstractDuckFactory.CreateMallardDuck()));
-        Simulator(abstractDuckFactory.CreateRedHeadDuck());
+        //组合模式
+        Flock flockDocks=new Flock();
+        flockDocks.Add(abstractDuckFactory.CreateMallardDuck());
+        flockDocks.Add(abstractDuckFactory.CreateRedHeadDuck());
+        Simulator(flockDocks);
+
+        //观察者模式、
+       // abstractDuckFactory.CreateMallardDuck();
+
+
+
+       /* Simulator(abstractDuckFactory.CreateMallardDuck());
+        Simulator(abstractDuckFactory.CreateRedHeadDuck());*/
         Simulator(gooseDuckAdapter);
-        System.out.println("鸭子叫唤次数："+KuackableCounter.GetQuackCount());
+        System.out.println("鸭子叫唤次数："+ QuackableCounter.GetQuackCount());
     }
 
     /**
      * 叫
      *
-     * @param kuackable
+     * @param quackable
      */
-    public void Simulator(Kuackable kuackable) {
-        kuackable.quack();
+    public void Simulator(Quackable quackable) {
+        quackable.quack();
 
     }
 
