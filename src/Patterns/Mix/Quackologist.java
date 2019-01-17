@@ -1,18 +1,13 @@
 package Patterns.Mix;
 
-import java.util.Observable;
-import java.util.Observer;
-
 /**
- * @author:wangaimin
- * @date:2018/12/25 22:36
- * @description:订阅者
+ * author:'Gene.A.Wang'
+ * date:2019/1/17 11:14
+ * description:订阅者
  */
-
-public class Quackologist implements Observer {
+public class Quackologist implements QuackObserver {
     @Override
-    public void update(Observable o, Object arg) {
-      //Quackable quackable=(Quackable)o;
-      System.out.println("订阅了：");
+    public void update(Quackable duck) {
+        System.out.println("开始呱呱叫了："+duck);
     }
 }

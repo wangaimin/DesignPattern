@@ -19,32 +19,42 @@ public class DuckSimulator {
 //        System.out.println("鸭子叫唤次数："+QuackableCounter.GetQuackCount());
 
 
-
-        AbstractDuckFactory abstractDuckFactory=GetDuckFactory(0);
-        AbstractDuckFactory abstractDuckFactory2=GetDuckFactory(1);
+        AbstractDuckFactory abstractDuckFactory = GetDuckFactory(0);
+        AbstractDuckFactory abstractDuckFactory2 = GetDuckFactory(1);
 
         Init(abstractDuckFactory);
         Init(abstractDuckFactory2);
     }
 
-    public void Init(AbstractDuckFactory abstractDuckFactory){
+    public void Init(AbstractDuckFactory abstractDuckFactory) {
         Quackable gooseDuckAdapter = new GooseToQuackableAdapter(new CountryGoose());
 
+
+        Quackable mallardDuck = abstractDuckFactory.CreateMallardDuck();
+        Quackable redHeadDuck = abstractDuckFactory.CreateRedHeadDuck();
+
+
         //组合模式
-        Flock flockDocks=new Flock();
-        flockDocks.Add(abstractDuckFactory.CreateMallardDuck());
-        flockDocks.Add(abstractDuckFactory.CreateRedHeadDuck());
+        Flock flockDocks = new Flock();
+        flockDocks.Add(mallardDuck);
+        flockDocks.Add(redHeadDuck);
+
+        //观察者模式
+        Quackologist quackologist = new Quackologist();
+        mallardDuck.registerObserver(quackologist);
+        redHeadDuck.registerObserver(quackologist);
+        gooseDuckAdapter.registerObserver(quackologist);
+        //观察组合
+        //flockDocks.registerObserver(quackologist);
+
+
+
         Simulator(flockDocks);
-
-        //观察者模式、
-       // abstractDuckFactory.CreateMallardDuck();
-
-
 
        /* Simulator(abstractDuckFactory.CreateMallardDuck());
         Simulator(abstractDuckFactory.CreateRedHeadDuck());*/
         Simulator(gooseDuckAdapter);
-        System.out.println("鸭子叫唤次数："+ QuackableCounter.GetQuackCount());
+        System.out.println("鸭子叫唤次数：" + QuackableCounter.GetQuackCount());
     }
 
     /**
@@ -59,13 +69,14 @@ public class DuckSimulator {
 
     /**
      * 简单工厂模式获取鸭子工厂
+     *
      * @param type
      * @return
      */
-    public AbstractDuckFactory GetDuckFactory(int type){
-        if (type==0){
+    public AbstractDuckFactory GetDuckFactory(int type) {
+        if (type == 0) {
             return new DuckFactory();
-        }else {
+        } else {
             return new CountingDuckFactory();
         }
     }
