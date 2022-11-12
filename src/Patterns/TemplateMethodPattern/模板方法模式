@@ -9,6 +9,6 @@
 
 
 .NET中的应用：
-
+ASP.NET MVC Global.asax.cs（MvcApplication）文件中的方法就是利用模板方法，定义了方法执行的顺序，使用者可以自定义方法实现
 
 JAVA中的应用：
